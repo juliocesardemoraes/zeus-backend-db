@@ -9,7 +9,7 @@ app.use(cors({}));
 
 app.get("/", async (req, res) => {
   const users = await User.find({});
-  return res.send({ users });
+  return res.send({ status: "ok", users: users });
 });
 
 const PORT = process.env.PORT || 3001;
